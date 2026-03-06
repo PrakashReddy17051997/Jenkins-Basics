@@ -22,4 +22,16 @@ pipeline {
             }
         }
     }
+    // post build
+    post {
+        always{
+            echo 'We Will always Win again!'
+        }
+        failure {
+            echo 'failure occured, inform the concerned teams over slack'
+        }
+        success {
+            echo 'Confragulations on success build'
+        }
+    }
 }
